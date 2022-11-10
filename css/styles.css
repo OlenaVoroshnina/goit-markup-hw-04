@@ -23,6 +23,9 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
+img {
+  display: block;
+}
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -39,12 +42,6 @@ p {
 .title {
   color: var(--black-title);
 }
-.nav-list,
-.flex-content img,
-.work-list > img,
-.flex-content img {
-  display: block;
-}
 
 .list,
 .main-nav,
@@ -53,7 +50,7 @@ p {
 }
 
 .list {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -193,6 +190,7 @@ p {
   background-color: var(--bg-white);
   align-items: center;
   justify-content: center;
+  border-radius: 4px;
 }
 .credo-icon-size {
   width: 70px;
@@ -296,6 +294,7 @@ p {
   background-color: var(--bg-white);
   text-align: center;
   cursor: pointer;
+  border-radius: 4px;
 }
 .filter:hover,
 .filter:focus {
@@ -319,6 +318,7 @@ p {
 }
 .work-list {
   text-decoration: none;
+  display: block;
 }
 .work-name {
   font-size: 18px;
@@ -335,14 +335,12 @@ p {
 }
 .work-border {
   padding: 20px 24px;
-  background: var(--white);
   border: 1px solid var(--color-border);
   border-top: 0;
 }
 
-.work-list > img:hover,
-.work-list .work-border:hover,
-.work-border:focus {
+.work-list:hover,
+.work-list:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -358,28 +356,27 @@ p {
   display: flex;
   gap: 30px;
 }
-.clients-item {
+
+.clients-icon {
   width: 170px;
   height: 92px;
   border: 1px solid var(--icon-color);
+  border-radius: 4px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--icon-color);
 }
-.clients-icon {
-  fill: var(--icon-color);
-}
-.clients-item .clients-icon:hover,
+.clients-icon:hover,
 .clients-icon:focus {
-  fill: var(--blue);
-}
-.clients-item:hover {
+  color: var(--blue);
   border: 1px solid var(--blue);
 }
+
 .clients-icon-size {
   width: 106px;
   height: 60px;
+  fill: currentColor;
 }
 
 .footer {
@@ -411,9 +408,7 @@ p {
 .footer-nav:focus {
   color: var(--blue);
 }
-.footer-join {
-  margin-top: 12px;
-}
+
 .join-title {
   font-size: 14px;
   line-height: 1.14;
@@ -424,6 +419,7 @@ p {
 .footer-list {
   display: flex;
   gap: 70px;
+  align-items: baseline;
 }
 .footer-join-list {
   max-width: 206px;
